@@ -12,5 +12,5 @@ class FuzzyBaseRule:
         self.rules: dict = {}
 
     def add_rule(self, rule: FuzzyRule):
+        assert not(rule.rule_id in [*self.rules]), 'Rule id already assigned'
         pass
-

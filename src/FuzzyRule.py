@@ -26,3 +26,16 @@ class FuzzyRule:
         self.rule_id: str = rule_id
         self.premises: List[FuzzyFact] = premises
         self.conclusions: List[FuzzyFact] = conclusions
+
+
+if __name__ == "__main__":
+    premise_1 = FuzzyFact('el animal', 'tiene', 'pelo')
+
+    conclusion_1 = FuzzyFact('el animal', 'es', 'mamifero', 0.8)
+    conclusion_2 = FuzzyFact('el animal', 'es', 'ave', -1.0)
+    conclusion_3 = FuzzyFact('el animal', 'es', 'leche', -1.0)
+
+    r1_premises = [premise_1]
+    r1_conclusions = [conclusion_1, conclusion_2, conclusion_3]
+
+    rule_1 = FuzzyRule('R1', r1_premises, r1_conclusions)
