@@ -39,6 +39,10 @@ class FuzzyFact:
         self.cv: float = cv
 
     def __repr__(self):
+        """
+        Put the object together for printing.
+        Magic method for print(object) command.
+        """
         sentence = ' '.join([self.obj, self.atr, self.val])
         sentence = f'(({sentence}) {self.cv})'
         return sentence
